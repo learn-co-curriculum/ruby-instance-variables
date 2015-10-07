@@ -5,6 +5,10 @@
 1. Define instance variables.
 2. Understand why we need to use them and how they work.
 
+## Overview
+
+When we build objects through our own classes, we know we can add behavior to the objects through instance methods, but what about data? How would we teach a dog about what it's name is? Or what breed it is? How do we put data inside of an instance of an object so that each dog can have its own name and own breed? How do we give objects attributes or properties?
+
 ## What Is An Instance Variable?
 
 We've been working with variables for a while now. For example:
@@ -16,11 +20,9 @@ bro_greeting = "Sup, bro?"
 The code above sets a variable, `bro_greeting`, equal to the string `"Sup, bro?"`. Now, we can use that variable to read and operate on that string.
 
 ```ruby
-bro_greeting
-  => "Sup, bro?"
+bro_greeting #=> "Sup, bro?"
 
-bro_greeting.upcase
-  => "SUP, BRO?"
+bro_greeting.upcase #=> "SUP, BRO?"
 ```
 
 The `bro_greeting` variable is what's known as a **local variable**, so named because it can only be accessed in a specific, local environment.
@@ -31,23 +33,23 @@ An **instance variable** is a variable that is accessible in any instance method
 
 ## We Need Instance Variables
 
-**If you want to code along with this reading, put this project on your computer and open in Sublime text.**
-
 Let's say we have a class called `Dog` that is responsible for producing individual dog objects. We want each dog to be able to have a name and show it's name. So, we need to write some methods:
+
+Make a file: `dog.rb`
 
 ```ruby
 class Dog
-	def name=(dog_name)
-		this_dogs_name = dog_name
-	end
+  def name=(dog_name)
+    this_dogs_name = dog_name
+  end
 
-	def name
-		this_dogs_name
-	end
+  def name
+    this_dogs_name
+  end
 end
 ```
 
-Here we define two instance methods, the `name=`, or "name equals" method, and the `name` method. The first method takes in an argument of a dog's name and sets that argument equal to a variable, `this_dogs_name`. The second method is responsible for reporting, or reading the name.
+Here we define two instance methods, the `name=`, or "name equals" method, and the `name` method. The first method takes in an argument of a dog's name and sets that argument equal to a variable, `this_dogs_name`. The second method is responsible for reporting, or reading the name. The methods act as mechanisms to expose data from inside of the object to the outside world.
 
 Here's how it **should** work in practice:
 
@@ -55,8 +57,7 @@ Here's how it **should** work in practice:
 lassie = Dog.new
 lassie.name = "Lassie"
 
-lassie.name
-	=> "Lassie"
+lassie.name #=> "Lassie"
 ```
 
 Our two methods are responsible for "setting" and "getting" an individual dog's name.
@@ -67,7 +68,7 @@ Run the file in your terminal by typing `ruby dog.rb`. You should see the follow
 
 ```
 dog.rb:8:in `name': undefined local variable or method `this_dogs_name' for #<Dog:0x007ffd609ed0a8> (NameError)
-	from dog.rb:15:in `<main>'
+  from dog.rb:15:in `<main>'
 ```
 
 Uh-oh. Looks like the `#name` method doesn't know about the `this_dogs_name` variable from the `#name=` method. That is because `this_dogs_name` is a **local variable**. A local variable has a **local scope**. That means that it cannot be accessed outside of the method in which it is defined.
@@ -102,7 +103,6 @@ puts lassie.name
 ```
 
 Run the file again by typing `ruby dog.rb` in your terminal and you should see `Lassie` outputted to your terminal.
-
 
 It worked! Why did it work? Inside the `#name=` method, we set the value of `@this_dogs_name` equal to whatever string is passed in as an argument. Then, we are able to call on that same instance variable in a totally separate method, the `#name` method.
 
