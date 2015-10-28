@@ -75,7 +75,7 @@ Uh-oh. Looks like the `#name` method doesn't know about the `this_dogs_name` var
 
 ## Implementing Instance Variables
 
-We define an instance variable by prefacing the variable name with a `@` symbol.
+We define an instance variable by prefacing the variable name with an `@` symbol.
 
 Instance variables are bound to an instance of a class. That means that the value held by an instance variable is specific to whatever instance of the class it happens to belong to. Instance variables hold information about an instance, usually an attribute of that instance, and can be called on throughout the class, without needing to be passed into other methods as arguments (as would be the case with local variables).
 
