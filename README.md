@@ -50,7 +50,7 @@ class Dog
 end
 ```
 
-Here we've defined two instance methods, the `name=`, or "name equals" method, and the `name` method. The first method takes in an argument of a dog's name and sets that argument equal to a variable, `this_dogs_name`. The second method is responsible for reporting, or reading the name. The methods act as mechanisms to expose data from inside of the object to the outside world.
+Here we've defined two instance methods, the `name=`, or "name equals" method, and the `name` method. The first method takes in the argument, dog_name, and sets that argument equal to a variable, this_dogs_name. The second method is responsible for reporting, or reading the name. The methods act as mechanisms to expose data from inside of the object to the outside world.
 
 Our two methods therefore are responsible for "setting" and "getting" an individual dog's name.
 
@@ -111,3 +111,5 @@ It worked! Why did it work? Inside the `#name=` method, we set the value of `@th
 As we dive deeper into object oriented Ruby, we'll be using instance variables frequently to pass information around the instance methods of a class. Think of instance variables as the containers for instance-specific information. The ability of instance variables to store information and be accessible within different instance methods is one of the things that makes it possible for us to create similar, but unique objects in object orientated Ruby.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-instance-variables' title='Instance Variables'>Instance Variables</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/ruby-instance-variables'>Instance Variables</a> on Learn.co and start learning to code for free.</p>
