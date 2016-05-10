@@ -108,6 +108,8 @@ It worked! Why did it work? Inside the `#name=` method, we set the value of `@th
 
 ## Conclusion
 
-As we dive deeper into object oriented Ruby, we'll be using instance variables frequently to pass information around the instance methods of a class. Think of instance variables as the containers for instance-specific information. The ability of instance variables to store information and be accessible within different instance methods is one of the things that makes it possible for us to create similar, but unique objects in object orientated Ruby.
+As we dive deeper into object oriented Ruby, we'll be using instance variables frequently to pass information around the instance methods of a class. Think of instance variables as the containers for instance-specific information. The ability of instance variables to store information and be accessible within different instance methods is one of the things that makes it possible for us to create similar, but unique objects in object oriented Ruby.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-instance-variables' title='Instance Variables'>Instance Variables</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/ruby-instance-variables'>Instance Variables</a> on Learn.co and start learning to code for free.</p>
